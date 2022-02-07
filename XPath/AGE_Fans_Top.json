@@ -20,23 +20,37 @@
   
   
     // 首页推荐视频的节点
-	"homeVodNode": "//div[@class='col-md-12 movie-item-out']//a[not(contains(@href, '6'))]/parent::*/parent::*/parent::*/div[contains(@class, 'movie-item-out') and position()<10]/div[@class='movie-item']/a",
+	"homeVodNode": "//div[@class='wrap']/div[@class='index-list clearfix'][3]/div[@class='index-list-l']//ul/li[position()<9]|//div[@class='wrap']/div[@class='index-list clearfix'][4]/div[@class='index-list-l']//ul/li[position()<9]|//div[@class='wrap']/div[@class='index-list clearfix'][5]/div[@class='index-list-l']//ul/li[position()<9]|//div[@class='wrap']/div[@class='index-list clearfix'][2]/div[@class='index-list-l']//ul/li[position()<9]",
     // 首页推荐视频的名称
-	"homeVodName": "/@title",
+	"homeVodName": "/a/@title",
     // 二次处理正则
     "homeVodNameR": "",
     // 首页推荐视频的id
-	"homeVodId": "/@href",
+	"homeVodId": "/a/@href",
     // 二次处理正则
-	"homeVodIdR": "/show/(\\w+).html",
+	//"homeVodIdR": "/show/(\\w+).html",
+	"homeVodIdR": "",
     // 首页推荐视频的图片
-	"homeVodImg": "/img/@src",
+	"homeVodImg": "/a//img/@src",
     // 二次处理正则
     "homeVodImgR": "",
     // 首页推荐视频的简介
-	"homeVodMark": "/button/text()",
+	"homeVodMark": "",
     // 二次处理正则
     "homeVodMarkR": "",
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
     // 分类页地址 {cateId} 分类id {catePg} 当前页
 	"cateUrl": "http://www.9rmb.com/type/{cateId}/{catePg}.html",
     // 同上面的homeVod字段 分类列表中的视频信息
