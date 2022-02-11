@@ -110,12 +110,12 @@
 	
 	
     // 搜索地址
-	"searchUrl": "https://www.jpysvip.net/vodsearch/-------------.html?wd={wd}&submit=",
+	"searchUrl": "https://www.jpysvip.net/index.php/ajax/suggest?mid=1&wd={wd}&limit=100",
     // 同上面的homeVod字段 搜索结果中的视频信息, 这里有对苹果cms suggest搜索接口的特殊支持，参考示例中的极品影视
-	"scVodNode": "//div[@class='movie-item']/a",
-	"scVodName": "/@title",
-	"scVodId": "/@href",
-	"scVodIdR": "/show/(\\w+).html",
-	"scVodImg": "/img/@src",
-	"scVodMark": "/button/text()"
+	"scVodNode": "json:list",
+	"scVodName": "name",
+	"scVodId": "id",
+	"scVodIdR": "",
+	"scVodImg": "pic",
+	"scVodMark": ""
 }
