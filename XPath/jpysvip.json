@@ -80,42 +80,37 @@
     // 视频简介
 	"dtDesc": "//p[5]/text()",
 	"dtDescR": "简介：(.*?)详情",
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
     // 播放源节点
-	"dtFromNode": "//div[contains(@class,'resource-list')]/div[@class='panel-heading']/strong",
+	"dtFromNode": "//a[@data-toggle='tab' and contains(@href, 'playlist')]",
     // 播放源名称
 	"dtFromName": "/text()",
     // 二次处理正则
-	"dtFromNameR": "\\S+\\.(\\S+) \\(",
+	"dtFromNameR": "",
     // 播放列表节点
-	"dtUrlNode": "//div[contains(@class,'resource-list')]/ul[@class='dslist-group']",
+	"dtUrlNode": "//div[contains(@class,'tab-content')]/div[contains(@id, 'playlist')]",
     // 播放地址节点
-	"dtUrlSubNode": "/li/a",
+	"dtUrlSubNode": "//li/a",
     // 播放地址
-	"dtUrlId": "@href",
+	"dtUrlId": "/@href",
     // 二次处理正则
-	"dtUrlIdR": "/play/(\\S+).html",
+	"dtUrlIdR": "/vodplay/(\\S+).html",
     // 剧集名称
 	"dtUrlName": "/text()",
     // 二次处理正则
 	"dtUrlNameR": "",
     // 播放页面的地址 {playUrl} 对应上面 dtUrlId 获取到的地址
-	"playUrl": "http://www.9rmb.com/play/{playUrl}.html",
+	"playUrl": "https://www.jpysvip.net/vodplay/{playUrl}.html",
     // 解析webview的user-agent
 	"playUa": "",
+	
+	
+	
+	
+	
+	
+	
     // 搜索地址
-	"searchUrl": "http://www.9rmb.com/search?wd={wd}",
+	"searchUrl": "https://www.jpysvip.net/vodsearch/-------------.html?wd={wd}&submit=",
     // 同上面的homeVod字段 搜索结果中的视频信息, 这里有对苹果cms suggest搜索接口的特殊支持，参考示例中的极品影视
 	"scVodNode": "//div[@class='movie-item']/a",
 	"scVodName": "/@title",
