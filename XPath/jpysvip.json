@@ -1,0 +1,126 @@
+//极品影视网        https://www.jpysvip.net/
+{
+	"ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:96.0) Gecko/20100101 Firefox/96.0",
+    // 首页地址 用于获取 分类和首页推荐
+	"homeUrl": "https://www.jpysvip.net/",
+    // 分类节点
+	"cateNode": "//ul[@class='item nav-list clearfix']/li[position()>1 and position()<20]/a",
+    // 分类名
+	"cateName": "/text()",
+    // 分类id
+	"cateId": "/@href",
+    // 分类id二次处理正则
+	"cateIdR": "/vodtype/(\\d+).html",
+    // 手动设置分类，如果手动设置了分类则不使用上面的分类xpath获取分类  例如 "cateManual": {"电影": "1", "电视剧": "2"},
+	"cateManual": {},
+    // 首页推荐视频的节点
+	"homeVodNode": "//div[contains(@class, 'col-lg-wide-75')]//ul[contains(@class,'myui-vodlist')]/li//a[contains(@class,'myui-vodlist__thumb')]",
+    // 首页推荐视频的名称
+	"homeVodName": "/@title",
+    // 二次处理正则
+    "homeVodNameR": "",
+    // 首页推荐视频的id
+	"homeVodId": "/@href",
+    // 二次处理正则
+	"homeVodIdR": "/voddetail/(\\w+).html",
+    
+  // 首页推荐视频的图片
+	"homeVodImg": "/@data-original",
+  
+    // 二次处理正则
+    "homeVodImgR": "\\S+(http\\S+)",
+    // 首页推荐视频的简介
+	"homeVodMark": "/span[contains(@class,'pic-text')]/text()",
+    // 二次处理正则
+    "homeVodMarkR": "",
+  
+    // 分类页地址 {cateId} 分类id {catePg} 当前页
+	"cateUrl": "https://www.jpysvip.net/vodtype/{cateId}/{catePg}.html",
+  
+    // 同上面的homeVod字段 分类列表中的视频信息
+	"cateVodNode": "//ul[contains(@class,'myui-vodlist')]//li//a[contains(@class,'myui-vodlist__thumb')]",
+	"cateVodName": "/@title",
+	"cateVodId": "/@href",
+	"cateVodIdR": "/voddetail/(\\w+).html",
+  
+	"cateVodImg": "/@data-original",
+  "cateVodImgR": "\\S+(http\\S+)",
+  
+  // 分类页视频的简介
+	"cateVodMark": "\\S+(http\\S+)",
+    // 详情页地址 用于获取详情页信息 及 播放列表和地址
+	"dtUrl": "https://www.jpysvip.net/voddetail/{vid}.html",
+    // 详情节点
+	"dtNode": "//div[contains(@class,'col-lg-wide-75')]",
+    // 视频名
+	"dtName": "//div[@class='myui-content__thumb']/a[contains(@class,'myui-vodlist__thumb')]/@title",
+	"dtNameR": "",
+    // 视频图片
+	"dtImg": "//div[@class='myui-content__thumb']/a[contains(@class,'myui-vodlist__thumb')]/img/@data-original",
+	"dtImgR": "\\S+(http\\S+)",
+  
+    // 视频分类
+	"dtCate": "//p[1]//span[contains(text(),'分类')]/following-sibling::a[1]/text()",
+	"dtCateR": "",
+    // 视频年份
+	"dtYear": "//p[1]//span[contains(text(),'年份')]/following-sibling::a[1]/text()",
+	"dtYearR": "",
+    // 视频地区
+	"dtArea": "//p[1]//span[contains(text(),'地区')]/following-sibling::a[1]/text()",
+	"dtAreaR": "",
+    // 视频状态
+	"dtMark": "",
+	"dtMarkR": "",
+    // 主演
+	"dtActor": "//p[3]//span[contains(text(),'主演')]/following-sibling::*/text()",
+	"dtActorR": "",
+    // 导演
+	"dtDirector": "//p[4]//span[contains(text(),'导演')]/following-sibling::*/text()",
+	"dtDirectorR": "",
+    // 视频简介
+	"dtDesc": "//p[5]/text()",
+	"dtDescR": "简介：(.*?)详情",
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    // 播放源节点
+	"dtFromNode": "//div[contains(@class,'resource-list')]/div[@class='panel-heading']/strong",
+    // 播放源名称
+	"dtFromName": "/text()",
+    // 二次处理正则
+	"dtFromNameR": "\\S+\\.(\\S+) \\(",
+    // 播放列表节点
+	"dtUrlNode": "//div[contains(@class,'resource-list')]/ul[@class='dslist-group']",
+    // 播放地址节点
+	"dtUrlSubNode": "/li/a",
+    // 播放地址
+	"dtUrlId": "@href",
+    // 二次处理正则
+	"dtUrlIdR": "/play/(\\S+).html",
+    // 剧集名称
+	"dtUrlName": "/text()",
+    // 二次处理正则
+	"dtUrlNameR": "",
+    // 播放页面的地址 {playUrl} 对应上面 dtUrlId 获取到的地址
+	"playUrl": "http://www.9rmb.com/play/{playUrl}.html",
+    // 解析webview的user-agent
+	"playUa": "",
+    // 搜索地址
+	"searchUrl": "http://www.9rmb.com/search?wd={wd}",
+    // 同上面的homeVod字段 搜索结果中的视频信息, 这里有对苹果cms suggest搜索接口的特殊支持，参考示例中的极品影视
+	"scVodNode": "//div[@class='movie-item']/a",
+	"scVodName": "/@title",
+	"scVodId": "/@href",
+	"scVodIdR": "/show/(\\w+).html",
+	"scVodImg": "/img/@src",
+	"scVodMark": "/button/text()"
+}
