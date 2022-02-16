@@ -1,125 +1,109 @@
-
+//AGE_Fans        http://www.agefans.top/
 {
-	"ua": "",
+	"ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:96.0) Gecko/20100101 Firefox/96.0",
     // 首页地址 用于获取 分类和首页推荐
-	"homeUrl": "http://www.agefans.top",
+	"homeUrl": "http://www.agefans.top/",
     // 分类节点
-	"cateNode": "//div[@class='topall']//ul[@class='nav-pc']/li[position()>1 and position()<6]",
+	"cateNode": "//ul[@class='nav-pc']/li[position()>1 and position()<6]//a",
     // 分类名
-	"cateName": "//a/text()",
+	"cateName": "/text()",
     // 分类id
-	"cateId": "//a/@href",
+	"cateId": "/@href",
     // 分类id二次处理正则
-  "cateIdR": "/(\\w+)/0/0/all/(\\d+).html",
-  
-  
+	"cateIdR": "/([^/]*)/0/0/all/\\d+.html",
     // 手动设置分类，如果手动设置了分类则不使用上面的分类xpath获取分类  例如 "cateManual": {"电影": "1", "电视剧": "2"},
-	//"cateManual": {},
-  
-  
-  
-  
+	"cateManual": {},
     // 首页推荐视频的节点
-	"homeVodNode": "//div[@class='wrap']/div[@class='index-list clearfix'][3]/div[@class='index-list-l']//ul/li[position()<9]|//div[@class='wrap']/div[@class='index-list clearfix'][4]/div[@class='index-list-l']//ul/li[position()<9]|//div[@class='wrap']/div[@class='index-list clearfix'][5]/div[@class='index-list-l']//ul/li[position()<9]|//div[@class='wrap']/div[@class='index-list clearfix'][2]/div[@class='index-list-l']//ul/li[position()<9]",
+	"homeVodNode": "//div[@class='index-list-l']//ul/li/a",
     // 首页推荐视频的名称
-	"homeVodName": "/a/@title",
+	"homeVodName": "/@title",
     // 二次处理正则
     "homeVodNameR": "",
     // 首页推荐视频的id
-	"homeVodId": "/a/@href",
+	"homeVodId": "/@href",
     // 二次处理正则
-	//"homeVodIdR": "/show/(\\w+).html",
 	"homeVodIdR": "",
-    // 首页推荐视频的图片
-	"homeVodImg": "/a//img/@src",
+  // 首页推荐视频的图片
+	"homeVodImg": "//img/@data-original",
     // 二次处理正则
     "homeVodImgR": "",
     // 首页推荐视频的简介
-	"homeVodMark": "",
+	"homeVodMark": "//p[@class='bz']/text()",
     // 二次处理正则
     "homeVodMarkR": "",
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
     // 分类页地址 {cateId} 分类id {catePg} 当前页
-	"cateUrl": "http://www.9rmb.com/type/{cateId}/{catePg}.html",
+	"cateUrl": "http://www.agefans.top/{cateId}/0/0/all/{catePg}.html",
     // 同上面的homeVod字段 分类列表中的视频信息
-	"cateVodNode": "//div[@class='movie-item']/a",
+	"cateVodNode": "//ul[@class='main']/li/a",
 	"cateVodName": "/@title",
 	"cateVodId": "/@href",
-	"cateVodIdR": "/show/(\\w+).html",
-	"cateVodImg": "/img/@src",
-	"cateVodMark": "/button/text()",
+	"cateVodIdR": "/[a-zA-Z]*/(\\d+)/",
+	"cateVodImg": "//img/@data-original",
+  	"cateVodImgR": "",
+    // 分类页视频的简介
+	"cateVodMark": "//p[@class='bz']",
+    // 二次处理正则
+   	"cateVodMarkR": "",
     // 详情页地址 用于获取详情页信息 及 播放列表和地址
-	"dtUrl": "http://www.9rmb.com/show/{vid}.html",
+	"dtUrl": "http://www.agefans.top/{cateId}/{vid}/",
     // 详情节点
-	"dtNode": "//div[@class='container-fluid']",
+	"dtNode": "//div[@class='content mb clearfix']/parent::div",
     // 视频名
-	"dtName": "//div[@class='col-md-9']//div[@class='col-md-4']//img/@alt",
+	"dtName": "//dt[@class='name']/text()",
 	"dtNameR": "",
     // 视频图片
-	"dtImg": "//div[@class='col-md-9']//div[@class='col-md-4']//img/@src",
+	"dtImg": "//div[@class='pic']/img/@data-original",
 	"dtImgR": "",
     // 视频分类
-	"dtCate": "//div[@class='col-md-8']//span[@class='info-label' and contains(text(), '类型')]/parent::*/following-sibling::*/text()",
+	"dtCate": "//b[contains(text(),"类型")]/following-sibling::a/text()",
 	"dtCateR": "",
     // 视频年份
-	"dtYear": "//div[@class='col-md-8']//span[@class='info-label' and contains(text(), '日期')]/parent::*/following-sibling::*/text()",
+	"dtYear": "//b[contains(text(),"年代")]/following-sibling::text()",
 	"dtYearR": "",
     // 视频地区
-	"dtArea": "//div[@class='col-md-8']//span[@class='info-label' and contains(text(), '国家')]/parent::*/following-sibling::*/text()",
+	"dtArea": "//b[contains(text(),"地区")]/following-sibling::text()[1]",
 	"dtAreaR": "",
     // 视频状态
-	"dtMark": "//div[@class='col-md-8']//span[@class='info-label' and contains(text(), '状态')]/parent::*/following-sibling::*/text()",
+	"dtMark": "",
 	"dtMarkR": "",
     // 主演
-	"dtActor": "//div[@class='col-md-8']//span[@class='info-label' and contains(text(), '主演')]/parent::*/following-sibling::*/text()",
-	"dtActorR": "",
+	"dtActor": "//dd[position()=4]/text()",
+	"dtActorR": "演员：(.*)",
     // 导演
-	"dtDirector": "//div[@class='col-md-8']//span[@class='info-label' and contains(text(), '导演')]/parent::*/following-sibling::*/text()",
+	"dtDirector": "",
 	"dtDirectorR": "",
     // 视频简介
-	"dtDesc": "//p[@class='summary']/text()",
+	"dtDesc": "//div[@class='des2']/text()",
 	"dtDescR": "",
     // 播放源节点
-	"dtFromNode": "//div[contains(@class,'resource-list')]/div[@class='panel-heading']/strong",
+	"dtFromNode": "//li[@id='tab11']",
     // 播放源名称
 	"dtFromName": "/text()",
     // 二次处理正则
-	"dtFromNameR": "\\S+\\.(\\S+) \\(",
+	"dtFromNameR": "",
     // 播放列表节点
-	"dtUrlNode": "//div[contains(@class,'resource-list')]/ul[@class='dslist-group']",
+	"dtUrlNode": "//div[@id='stab_1_71']",
     // 播放地址节点
-	"dtUrlSubNode": "/li/a",
+	"dtUrlSubNode": "//li/a",
     // 播放地址
-	"dtUrlId": "@href",
+	"dtUrlId": "/@href",
     // 二次处理正则
-	"dtUrlIdR": "/play/(\\S+).html",
+	"dtUrlIdR": "/{cateId}/{vid}/(\\S+).html",
     // 剧集名称
 	"dtUrlName": "/text()",
     // 二次处理正则
 	"dtUrlNameR": "",
     // 播放页面的地址 {playUrl} 对应上面 dtUrlId 获取到的地址
-	"playUrl": "http://www.9rmb.com/play/{playUrl}.html",
+	"playUrl": "http://www.agefans.top/{cateId}/{vid}/{playUrl}.html",
     // 解析webview的user-agent
 	"playUa": "",
     // 搜索地址
-	"searchUrl": "http://www.9rmb.com/search?wd={wd}",
+	"searchUrl": "http://159.75.0.62:11234/ssszz.php?top=10&q={wd}",
     // 同上面的homeVod字段 搜索结果中的视频信息, 这里有对苹果cms suggest搜索接口的特殊支持，参考示例中的极品影视
-	"scVodNode": "//div[@class='movie-item']/a",
-	"scVodName": "/@title",
-	"scVodId": "/@href",
-	"scVodIdR": "/show/(\\w+).html",
-	"scVodImg": "/img/@src",
-	"scVodMark": "/button/text()"
+	"scVodNode": "json:list",
+	"scVodName": "title",
+	"scVodId": "url",
+	"scVodIdR": "/[a-zA-Z]*/(\\d+)/",
+	"scVodImg": "thumb",
+	"scVodMark": ""
 }
