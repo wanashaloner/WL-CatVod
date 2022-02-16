@@ -55,13 +55,13 @@
 	"dtImg": "//div[@class='pic']/img/@data-original",
 	"dtImgR": "",
     // 视频分类
-	"dtCate": "//b[contains(text(),"类型")]/following-sibling::a/text()",
+	"dtCate": "//b[contains(text(),'类型')]/following-sibling::a/text()",
 	"dtCateR": "",
     // 视频年份
-	"dtYear": "//b[contains(text(),"年代")]/following-sibling::text()",
+	"dtYear": "//b[contains(text(),'年代')]/following-sibling::text()",
 	"dtYearR": "",
     // 视频地区
-	"dtArea": "//b[contains(text(),"地区")]/following-sibling::text()[1]",
+	"dtArea": "//b[contains(text(),'地区')]/following-sibling::text()[1]",
 	"dtAreaR": "",
     // 视频状态
 	"dtMark": "",
