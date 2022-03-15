@@ -4,6 +4,14 @@
 !规则说明：网页元素过滤器（自用）
 
 !--------------------------------------------------------------------------
+! https://www.hao123.com/     hao123网址导航
+!--------------------------------------------------------------------------
+hao123.com###topbeWrapper
+
+
+
+
+!--------------------------------------------------------------------------
 ! http://www.offcn.com/     中公教育
 !--------------------------------------------------------------------------
 offcn.com##.dfgwy_nrtop
@@ -14,6 +22,11 @@ offcn.com##.zg-newBoxBorder
 offcn.com##.lh_rigThree
 offcn.com##.smdwimg
 offcn.com##.offcn_dt_1208
+offcn.com##.zg_zjzg
+offcn.com##.zg_qyxw
+offcn.com##.zg_zgry
+offcn.com##.zg_gdfb
+offcn.com##.cowZx
 
 
 
