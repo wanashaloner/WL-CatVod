@@ -317,6 +317,15 @@
             "filterable": 1,
             "ext": "https://qnys5566.com/mogai_api.php/v1.vod"
         }, {
+            "key": "csp_appys_v1_猪猪影院",
+            "name": "猪猪影院(M)",
+            "type": 3,
+            "api": "csp_AppYs",
+            "searchable": 1,
+            "quickSearch": 0,
+            "filterable": 1,
+            "ext": "http://app.2zdyy.com/api.php/v1.vod"
+        }, {
             "key": "csp_appys_v1_yoyo",
             "name": "悠悠影视(M)",
             "type": 3,
@@ -344,6 +353,15 @@
             "filterable": 1,
             "ext": "http://tv.cttv.vip/api.php/iptv/vod/"
         }, {
+            "key": "csp_appys_菜鸟追剧",
+            "name": "菜鸟追剧(M)",
+            "type": 3,
+            "api": "csp_AppYs",
+            "searchable": 1,
+            "quickSearch": 0,
+            "filterable": 1,
+            "ext": "http://81.71.18.95:5555/mogai_api.php/v1.vod"
+        }, {
             "key": "csp_appys_xiaogui_抹茶猪",
             "name": "抹茶猪(M)",
             "type": 3,
@@ -361,6 +379,15 @@
             "quickSearch": 0,
             "filterable": 1,
             "ext": "http://app.qianju.cc/api.php/v1.vod"
+        }, {
+            "key": "csp_appys_星球视频",
+            "name": "星球视频(M)",
+            "type": 3,
+            "api": "csp_AppYs",
+            "searchable": 1,
+            "quickSearch": 0,
+            "filterable": 1,
+            "ext": "http://119.29.121.48:8088/api.php/v1.vod"
         }, {
             "key": "csp_appys_大师兄",
             "name": "大师兄(M)",
@@ -631,6 +658,15 @@
             "quickSearch": 0,
             "filterable": 1,
             "ext": "https://www.bofangya.com/xgapp.php/v1/"
+        }, {
+            "key": "csp_appys_xiaogui_555电影",
+            "name": "555电影(M)",
+            "type": 3,
+            "api": "csp_AppYs",
+            "searchable": 1,
+            "quickSearch": 0,
+            "filterable": 1,
+            "ext": "http://w7tv.com/xgapp.php/v1/"
         }, {
             "key": "csp_appys_v1_侦探影视",
             "name": "侦探影视(M)",
