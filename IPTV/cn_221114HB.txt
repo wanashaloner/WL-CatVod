@@ -1,5 +1,7 @@
 CCTV-1综合 (1080p),http://39.134.115.163:8080/PLTV/88888910/224/3221225618/index.m3u8#http://39.134.115.163:8080/PLTV/88888910/224/3221225642/index.m3u8#http://117.169.120.140:8080/live/cctv-1/.m3u8#http://183.207.249.9/PLTV/3/224/3221225530/index.m3u8#http://183.207.249.15/PLTV/3/224/3221225530/index.m3u8
+CCTV+ 1 (600p) [Not 24/7],https://cd-live-stream.news.cctvplus.com/live/smil:CHANNEL1.smil/playlist.m3u8
 CCTV-2财经 (1080p),http://39.134.115.163:8080/PLTV/88888910/224/3221225619/index.m3u8#http://39.134.115.163:8080/PLTV/88888910/224/3221225643/index.m3u8#http://117.169.120.140:8080/live/cctv-2/.m3u8
+CCTV+ 2 (600p) [Not 24/7],https://cd-live-stream.news.cctvplus.com/live/smil:CHANNEL2.smil/playlist.m3u8
 CCTV-3综艺 (1080p),http://39.134.115.163:8080/PLTV/88888910/224/3221225634/index.m3u8#http://39.134.115.163:8080/PLTV/88888910/224/3221225647/index.m3u8#http://39.135.138.59:18890/PLTV/88888910/224/3221225647/index.m3u8#http://117.169.120.140:8080/live/cctv-3/.m3u8#http://183.207.249.14/PLTV/3/224/3221225588/index.m3u8#http://183.207.249.35/PLTV/4/224/3221227295/index.m3u8
 CCTV-3综艺 (480p) [Not 24/7],http://newvideo.dangtutv.cn:8278/CCTVzongyi/playlist.m3u8
 CCTV-4中文国际 (1080p),http://39.134.115.163:8080/PLTV/88888910/224/3221225621/index.m3u8#http://39.135.138.59:18890/PLTV/88888910/224/3221225621/index.m3u8#http://117.169.120.140:8080/live/cctv-4/.m3u8#http://183.207.249.6/PLTV/3/224/3221225534/index.m3u8#http://183.207.249.11/PLTV/3/224/3221225534/index.m3u8
@@ -18,8 +20,6 @@ CCTV-13新闻 (720p),http://39.135.138.59:18890/PLTV/88888910/224/3221225638/ind
 CCTV-13新闻 (576p),http://stream4.jlntv.cn/cctv13/sd/live.m3u8
 CCTV-17农业农村 (1080p),http://39.134.115.163:8080/PLTV/88888910/224/3221225908/index.m3u8#http://39.135.138.59:18890/PLTV/88888910/224/3221225907/index.m3u8
 CNC中文 (720p) [Not 24/7],http://source07.v.news.cn/live/CNC_CN/playlist.m3u8
-CCTV+ 1 (600p) [Not 24/7],https://cd-live-stream.news.cctvplus.com/live/smil:CHANNEL1.smil/playlist.m3u8
-CCTV+ 2 (600p) [Not 24/7],https://cd-live-stream.news.cctvplus.com/live/smil:CHANNEL2.smil/playlist.m3u8
 CGTN Documentary (576p),http://39.135.138.59:18890/PLTV/88888910/224/3221225645/index.m3u8
 CGTN Español (576p),https://livees.cgtn.com/1000e/prog_index.m3u8
 安徽卫视 (1080p),http://39.134.115.163:8080/PLTV/88888910/224/3221225691/index.m3u8#http://39.134.115.163:8080/PLTV/88888910/224/3221225737/index.m3u8#http://183.207.249.15/PLTV/3/224/3221225634/index.m3u8
